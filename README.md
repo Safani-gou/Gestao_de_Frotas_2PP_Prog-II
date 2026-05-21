@@ -8,7 +8,7 @@
 #MEMBROS DO GRUPO:
 
 	- Estefani Famorosa 	Nº 20240217
-	- Jorje Velos
+	- Jorje Veloso          N° 20241500
 	- Josemar Chipandeca
 
 # Descrição do Projecto: 
