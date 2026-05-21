@@ -1,13 +1,13 @@
 # GESTAO DE FROTAS (Sistema de Gestao de Veiculos em Java)
 
 	Disciplina:		Programacao II
-	Repositorio GitHub:	########################################
+	Repositorio GitHub:	https://github.com/Safani-gou/Gestao_de_Frotas_2PP_Prog-II.git
 	Linguagem:		Java
 	Ano:			2025
 
 #MEMBROS DO GRUPO:
-		Nome: 		  Nº: 
-	- Estefani Famorosa 	20240217  
+
+	- Estefani Famorosa 	Nº 20240217
 	- Jorje Velos
 	- Josemar Chipandeca
 
