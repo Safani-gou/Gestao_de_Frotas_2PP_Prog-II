@@ -1,15 +1,15 @@
 # GESTAO DE FROTAS (Sistema de Gestao de Veiculos em Java)
 
-	Disciplina:		Programacao II
-	Repositorio GitHub:	https://github.com/Safani-gou/Gestao_de_Frotas_2PP_Prog-II.git
-	Linguagem:		Java
-	Ano:			2025
+	Disciplina:				Programacao II
+	Repositorio GitHub:		https://github.com/Safani-gou/Gestao_de_Frotas_2PP_Prog-II.git
+	Linguagem:				Java
+	Ano:					2025
 
-#MEMBROS DO GRUPO:
+* MEMBROS DO GRUPO:
 
-	- Estefani Famorosa 	Nº 20240217
-	- Jorje Veloso          Nº 20241500
-	- Josemar Chipandeca    Nº 20242447
+		- Estefani Famorosa 	Nº 20240217
+		- Jorje Veloso          Nº 20241500
+		- Josemar Chipandeca    Nº 20242447
 
 # Descrição do Projecto: 
 
@@ -18,6 +18,7 @@ O presente projecto consiste no desenvolvimento de um sistema de Gestao de Frota
 # Objectivo:
 
 O objectivo principal e consolidar os conhecimentos de programacao orientada a objectos em Java, aplicando os seguintes conceitos obrigatorios:
+
 	•  Estruturas de seleccao (if/else, switch)
 	•  Estruturas de repeticao (for, do/while)
 	•  ArrayList para gestao de coleccoes de objectos
@@ -53,13 +54,13 @@ O sistema é excutado em terminal (linha de comandos) e apresenta um menu intera
 
 Representa um veiculo da frota. Contem os dados do carro e o estado de disponibilidade.
 
-	Atributo:	Tipo:		Descrição:
-	matricula	String		Identificador unico do veiculo
-	marca		String		Marca do veiculo (ex: Toyota)
-	modelo		String		Modelo do veiculo (ex: Corolla)
-	ano		int		Ano de fabricacao
-	disponivel	boolean		Indica se o carro esta disponivel para aluguer
-	clienteAtual	String		Nome do cliente que tem o carro alugado
+	Atributo:			Tipo:		Descrição:
+	matricula			String		Identificador unico do veiculo
+	marca				String		Marca do veiculo (ex: Toyota)
+	modelo				String		Modelo do veiculo (ex: Corolla)
+	ano					int			Ano de fabricacao
+	disponivel			boolean		Indica se o carro esta disponivel para aluguer
+	clienteAtual		String		Nome do cliente que tem o carro alugado
 
 * Metodos:
 
@@ -69,11 +70,11 @@ Representa um veiculo da frota. Contem os dados do carro e o estado de disponibi
  
 Regista cada operacao de aluguer realizada no sistema, com o cliente e as datas.
 
-	Atributo:	Tipo:		Descrição:
-	matricula	String		Matricula do carro alugado
-	cliente		String		Nome do cliente
-	dataAluguer	String		Data de inicio do aluguer
-	dataDevolucao	String		Data de devolucao (vazia se ainda alugado)
+	Atributo:			Tipo:		Descrição:
+	matricula			String		Matricula do carro alugado
+	cliente				String		Nome do cliente
+	dataAluguer			String		Data de inicio do aluguer
+	dataDevolucao		String		Data de devolucao (vazia se ainda alugado)
 
 * Metodos:
 
@@ -101,11 +102,12 @@ Ponto de entrada do programa. Implementa o menu interactivo em terminal usando S
 * Integracao de Ficheiros:
  
 O sistema utiliza dois ficheiros de texto para garantir que os dados nao se perdem ao encerrar o programa:
-Ficheiro	Conteudo	Formato de cada linha
-carros.txt	Todos os carros cadastrados	matricula;marca;modelo;ano;disponivel;cliente
-alugueres.txt	Historico de alugueres	matricula;cliente;dataAluguer;dataDevolucao
 
-Os ficheiros sao carregados automaticamente ao iniciar (FileReader + BufferedReader) e guardados apos cada operacao que altere os dados (FileWriter + PrintWriter).
+	Ficheiro	Conteudo	Formato de cada linha
+	carros.txt	Todos os carros cadastrados	matricula;marca;modelo;ano;disponivel;cliente
+	alugueres.txt	Historico de alugueres	matricula;cliente;dataAluguer;dataDevolucao
+
+Os ficheiros são carregados automaticamente ao iniciar (FileReader + BufferedReader) e guardados apos cada operacao que altere os dados (FileWriter + PrintWriter).
 
 * Estrutura do Projecto: 
 
