@@ -32,7 +32,7 @@ O sistema é excutado em terminal (linha de comandos) e apresenta um menu intera
 
 # Menu Principal:
 
-		Opção Descrição:
+* Opção Descrição:
 		________________________________________________________
 		
 		1. Cadastrar novo carro (matricula, marca, modelo, ano)
@@ -48,7 +48,7 @@ O sistema é excutado em terminal (linha de comandos) e apresenta um menu intera
 		
 # Classes Principais:
 
-- Classe Carro: 
+* Classe Carro: 
 
 Representa um veiculo da frota. Contem os dados do carro e o estado de disponibilidade.
 
@@ -60,9 +60,11 @@ Representa um veiculo da frota. Contem os dados do carro e o estado de disponibi
 	disponivel	boolean		Indica se o carro esta disponivel para aluguer
 	clienteAtual	String		Nome do cliente que tem o carro alugado
 
-•  Metodos: getMatricula(), isDisponivel(), setDisponivel(), setClienteAtual(), toFileString(), fromFileString(), toString()
+* Metodos:
 
- - Classe Aluguer:
+  		getMatricula(), isDisponivel(), setDisponivel(), setClienteAtual(), toFileString(), fromFileString(), toString()
+
+* Classe Aluguer:
  
 Regista cada operacao de aluguer realizada no sistema, com o cliente e as datas.
 
@@ -72,9 +74,11 @@ Regista cada operacao de aluguer realizada no sistema, com o cliente e as datas.
 	dataAluguer	String		Data de inicio do aluguer
 	dataDevolucao	String		Data de devolucao (vazia se ainda alugado)
 
-•  Metodos: getMatricula(), getCliente(), getDataDevolucao(), setDataDevolucao(), toFileString(), fromFileString(), toString()
+* Metodos:
 
- - Classe FrotaService:
+		getMatricula(), getCliente(), getDataDevolucao(), setDataDevolucao(), toFileString(), fromFileString(), toString()
+
+* Classe FrotaService:
  
 Contem toda a logica de negocio do sistema. Gere as listas de carros e alugueres e trata da persistencia em ficheiros.
 
@@ -89,11 +93,11 @@ Contem toda a logica de negocio do sistema. Gere as listas de carros e alugueres
 	•  guardarCarros() / carregarCarros() — persistencia em carros.txt
 	•  guardarAlugueres() / carregarAlugueres() — persistencia em alugueres.txt
 
- - Classe Main:
+* Classe Main:
  
 Ponto de entrada do programa. Implementa o menu interactivo em terminal usando Scanner e um ciclo do/while. Instancia o FrotaService e chama os seus metodos conforme a opcao escolhida pelo utilizador.
 
- - Integracao de Ficheiros:
+* Integracao de Ficheiros:
  
 O sistema utiliza dois ficheiros de texto para garantir que os dados nao se perdem ao encerrar o programa:
 Ficheiro	Conteudo	Formato de cada linha
@@ -102,16 +106,16 @@ alugueres.txt	Historico de alugueres	matricula;cliente;dataAluguer;dataDevolucao
 
 Os ficheiros sao carregados automaticamente ao iniciar (FileReader + BufferedReader) e guardados apos cada operacao que altere os dados (FileWriter + PrintWriter).
 
-- Estrutura do Projecto: 
+* Estrutura do Projecto: 
 
-Gestao_de_Frotas_2PP_ProgamacaoII/
-    src/
-        Main.java
-        Carro.java
-        Aluguer.java
-        FrotaService.java
-    carros.txt         (gerado automaticamente)
-    alugueres.txt      (gerado automaticamente)
+		* Gestao_de_Frotas_2PP_ProgamacaoII/
+   		 * src/
+  			Main.java
+        	Carro.java
+  			Aluguer.java
+  			FrotaService.java
+  		carros.txt         (gerado automaticamente)
+  		alugueres.txt      (gerado automaticamente)
 
 
 
