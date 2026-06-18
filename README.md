@@ -1,7 +1,7 @@
 # GESTAO DE FROTAS (Sistema de Gestao de Veiculos em Java)
 
 	Disciplina:				Programacao II
-	Repositorio GitHub:		https://github.com/Safani-gou/Gestao_de_Frotas_2PP_Prog-II.git
+	Repositorio GitHub:			https://github.com/Safani-gou/Gestao_de_Frotas_2PP_Prog-II.git
 	Linguagem:				Java
 	Ano:					2025
 
@@ -33,8 +33,7 @@ O sistema é excutado em terminal (linha de comandos) e apresenta um menu intera
 
 # Menu Principal:
 
-* Opção Descrição:
-
+					Funcionalidedes
 		________________________________________________________
 		
 		1. Cadastrar novo carro (matricula, marca, modelo, ano)
@@ -47,7 +46,31 @@ O sistema é excutado em terminal (linha de comandos) e apresenta um menu intera
 		8. Remover um carro da frota
 		0. Encerrar o sistema
 		________________________________________________________
-		
+* Novas Funcionalidades:
+
+	- Gestão de Cliente:
+
+			Registar Cliente
+			Consultar Cliente
+  			Renover Clientes
+    - Gestão de Aluguer:
+
+			Registar Aluguer
+  			Registar Devolução
+			Consultar Historico de Alluguer
+    - Gestão de Manutenção: 
+
+			Enviar Veiculo Para Manutenção
+  			Concluir Manuteção
+  			Consultar Fila da Manutenção
+    - Relatórios:
+  
+			Total de Veiculo
+			Veículo Desponíveis
+  			Veículos Alugados
+  			Veículo em Manuntenção
+  			Clientes com Mair número de Alugueres
+
 # Classes Principais:
 
 * Classe Carro: 
@@ -58,13 +81,13 @@ Representa um veiculo da frota. Contem os dados do carro e o estado de disponibi
 	matricula			String		Identificador unico do veiculo
 	marca				String		Marca do veiculo (ex: Toyota)
 	modelo				String		Modelo do veiculo (ex: Corolla)
-	ano					int			Ano de fabricacao
+	ano				int		Ano de fabricacao
 	disponivel			boolean		Indica se o carro esta disponivel para aluguer
-	clienteAtual		String		Nome do cliente que tem o carro alugado
+	clienteAtual			String		Nome do cliente que tem o carro alugado
 
 * Metodos:
 
-  		getMatricula(), isDisponivel(), setDisponivel(), setClienteAtual(), toFileString(), fromFileString(), toString()
+  		getMatricula(), onivel(), setDisponivel(), setClienteAtual(), toFileString(), fromFileString(), toString()
 
 * Classe Aluguer:
  
@@ -74,7 +97,7 @@ Regista cada operacao de aluguer realizada no sistema, com o cliente e as datas.
 	matricula			String		Matricula do carro alugado
 	cliente				String		Nome do cliente
 	dataAluguer			String		Data de inicio do aluguer
-	dataDevolucao		String		Data de devolucao (vazia se ainda alugado)
+	dataDevolucao			String		Data de devolucao (vazia se ainda alugado)
 
 * Metodos:
 
@@ -103,22 +126,22 @@ Ponto de entrada do programa. Implementa o menu interactivo em terminal usando S
  
 O sistema utiliza dois ficheiros de texto para garantir que os dados nao se perdem ao encerrar o programa:
 
-	Ficheiro	Conteudo	Formato de cada linha
+	Ficheiro	Conteudo			Formato de cada linha
 	carros.txt	Todos os carros cadastrados	matricula;marca;modelo;ano;disponivel;cliente
-	alugueres.txt	Historico de alugueres	matricula;cliente;dataAluguer;dataDevolucao
+	alugueres.txt	Historico de alugueres		matricula;cliente;dataAluguer;dataDevolucao
 
 Os ficheiros são carregados automaticamente ao iniciar (FileReader + BufferedReader) e guardados apos cada operacao que altere os dados (FileWriter + PrintWriter).
 
 * Estrutura do Projecto: 
 
 		* Gestao_de_Frotas_2PP_ProgamacaoII/
-   		 * src/
-  			Main.java
-        	Carro.java
+   		 * src/ 
+				Carro.java
   			Aluguer.java
-  			FrotaService.java
-  		carros.txt         (gerado automaticamente)
-  		alugueres.txt      (gerado automaticamente)
+				rotaService.java
+				Main.java
+  				carros.tx (gerado automaticamente)
+  				alugueres.txt (gerado automaticamente)
 
 
 
