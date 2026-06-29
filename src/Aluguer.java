@@ -1,25 +1,32 @@
 public class Aluguer {
 
     private String matricula;
-    private String cliente;
+    private String n_BI;
     private String dataAluguer;
     private String dataDevolucao;
 
-    public Aluguer(String matricula, String cliente, String dataAluguer) {
+    public Aluguer(String matricula, String n_BI, String dataAluguer) {
         this.matricula = matricula;
-        this.cliente = cliente;
+        this.n_BI = n_BI;
         this.dataAluguer = dataAluguer;
         this.dataDevolucao = "";
     }
-
+    public String getN_BI(){
+        return n_BI;
+    }
     public String getMatricula() {
         return matricula;
     }
 
     public String getCliente() {
-        return cliente;
+        return n_BI;
+    }
+    /*
+    public static String isRegistado(String rg){
+        C
     }
 
+     */
     public String getDataDevolucao() {
         return dataDevolucao;
     }
@@ -29,7 +36,7 @@ public class Aluguer {
     }
 
     public String toFileString() {
-        return matricula + ";" + cliente + ";" + dataAluguer + ";" + dataDevolucao;
+        return matricula + "; " + n_BI + "; " + dataAluguer + "; " + dataDevolucao;
     }
 
     public static Aluguer fromFileString(String linha) {
@@ -41,7 +48,7 @@ public class Aluguer {
 
     public String toString() {
         return "\nMatrícula: " + matricula +
-                "\nCliente: " + cliente +
+                "\nCliente: " + n_BI +
                 "\nData de Aluguer: " + dataAluguer +
                 "\nData de Devolução: " + (dataDevolucao.isEmpty() ? "Ainda alugado" : dataDevolucao);
     }
